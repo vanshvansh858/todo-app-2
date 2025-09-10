@@ -1,0 +1,16 @@
+.completed-task-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: 2px solid#000000;
+}
+.completed-task-heading{
+    text-align: center;
+    border-bottom: solid #000000;
+}
+.completed-elements{
+    border: 2px solid #000000;
+    margin: 1em 6em;
+    border-radius: 32px;
+    padding-left: 1em;
+}

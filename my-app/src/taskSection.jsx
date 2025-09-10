@@ -1,0 +1,16 @@
+import Task from './task.jsx'
+import CompletedTask from './completedTask.jsx'
+import './taskSection.css'
+
+function TaskSection({tasks, setNewTask, setEdit}){
+    return(
+        <div className='task-section'>
+            <div className='task-components'>
+                <Task tasks={tasks} setNewTask={setNewTask} setEdit={setEdit}/>
+                <CompletedTask />
+            </div>
+        </div>
+    )
+}
+
+export default TaskSection
