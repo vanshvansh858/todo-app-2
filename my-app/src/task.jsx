@@ -1,9 +1,12 @@
 import './task.css'
-function Task({tasks , setNewTask, setEdit}){
+function Task({tasks ,setTasks, setNewTask, setEdit}){
     function edit(task){
         setNewTask(task.text)
         setEdit(task.id)
         // want to do something to toggle update button
+    }
+    function deleteTask(id){
+        setTasks(tasks.filter(task=> (task.id !== id )))
     }
     return(
     <div className="task-container">
@@ -15,7 +18,7 @@ function Task({tasks , setNewTask, setEdit}){
             <h3>{task.text}</h3>
             <div className='action-buttons'>
                 <button onClick={()=>edit(task)} value={task.text} className='edit-button'>Edit</button>
-                <button className='delete-button'>Delete</button>
+                <button onClick={()=>deleteTask(task.id)} className='delete-button'>Delete</button>
             </div>
         </div>
         ))}

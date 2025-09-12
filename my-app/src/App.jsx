@@ -37,7 +37,7 @@ function App(){
             </div>
         </div>
         <div>
-            <TaskSection tasks={tasks} setNewTask = {setNewTask} setEdit={setEdit}/>
+            <TaskSection tasks={tasks} setTasks={setTasks} setNewTask = {setNewTask} setEdit={setEdit}/>
         </div>
     </div>
 
