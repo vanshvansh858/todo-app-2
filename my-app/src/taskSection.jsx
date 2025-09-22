@@ -7,7 +7,7 @@ function TaskSection({tasks,setTasks, setNewTask, setEdit}){
         <div className='task-section'>
             <div className='task-components'>
                 <Task tasks={tasks} setNewTask={setNewTask} setEdit={setEdit} setTasks = {setTasks}/>
-                <CompletedTask />
+                <CompletedTask tasks={tasks} setTasks={setTasks}/>
             </div>
         </div>
     )

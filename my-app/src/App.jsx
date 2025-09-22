@@ -7,6 +7,7 @@ function App(){
     const [tasks, setTasks] = useState([]);
     const [edit, setEdit] = useState("")
     function add(){
+        console.log(tasks)
         if(newTask.trim() === "") return
         for(let i=0;i<tasks.length;i++){
             if(tasks[i].text === newTask.trim()){
@@ -16,7 +17,7 @@ function App(){
         const element = {
             id: Date.now(),
             text: newTask,
-            completed: false
+            complete: false
         }
         setTasks([...tasks, element])
         setNewTask("")
@@ -31,7 +32,7 @@ function App(){
         <div className='top-component'>
             <h1 className='heading'>To-Do List</h1>
             <div className='child-container'>
-                <input type="text" className='add-input' value={newTask} onChange={(e) => setNewTask(e.target.value)} />
+                <input placeholder='Add you task here...' type="text" className='add-input' value={newTask} onChange={(e) => setNewTask(e.target.value)} />
                 <button onClick={add} className='add-button'>Add</button>
                 <button onClick={update} className='update-button'>Update</button>
             </div>
